@@ -1,0 +1,9 @@
+li a.active{
+    color: red !important;
+    background-color: white !important;
+    border-bottom: 1px solid red;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 0px;
+}
