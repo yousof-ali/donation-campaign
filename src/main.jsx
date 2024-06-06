@@ -13,16 +13,16 @@ import Error from './Components/Error/Error.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>,
+    element: <Home></Home>,
     errorElement:<Error></Error>,
     children:[
-      {
-        path:"/",
-        element:<Home></Home>
-      }
+      
     ]
   },
-  
+  {
+    path:"/home",
+    element:<Home></Home>
+  }
 ]);
 
 

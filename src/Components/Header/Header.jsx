@@ -6,7 +6,7 @@ import "./Header.css"
 const Header = () => {
 
     const menuBar = <>
-        <li><NavLink to={"/"}>Home</NavLink></li>
+        <li><NavLink to={"/home"}>Home</NavLink></li>
         <li><NavLink to={"/donation"}>Donation</NavLink></li>
         <li><NavLink to={"/statistics"}>Statistics</NavLink></li>
 
@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <nav>
             <div className="container mx-auto">
-                <div className="navbar bg-base-100">
+                <div className="navbar ">
                     <div className="navbar-start  ">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
