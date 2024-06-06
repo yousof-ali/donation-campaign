@@ -24,7 +24,7 @@ const Header = () => {
                                 {menuBar}
                             </ul>
                         </div>
-                        <img className="  btn btn-ghost lg:justify-start text-xl" src="/Logo.png" alt="" />
+                        <img className="  btn btn-ghost lg:justify-start text-xl" src="img/Logo.png" alt="" />
                     </div>
                     <div className="navbar-end hidden lg:flex">
                         <ul className="menu menu-horizontal text-xl flex gap-8 px-1">
