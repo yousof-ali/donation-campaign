@@ -1,10 +1,13 @@
-import { Link, useNavigate, useRouteError } from "react-router-dom";
+import { useNavigate, useRouteError } from "react-router-dom";
 
 
 const Error = () => {
     const error = useRouteError()
-    const useNaviGate = useNavigate()
-
+    const back = useNavigate()
+    
+    const oneBack = ()=>{
+        back(-1);
+    }
     
     return (
         <div className="text-center mt-16">
@@ -12,7 +15,7 @@ const Error = () => {
                 <img src="/img/images.png" alt="" />
             </div>
             <p>{error.data}</p> <br />
-            <Link to={useNaviGate(-1)}><button className=" text-white bg-red-600 border-0 p-4 rounded-xl hover:bg-red-400 ">Go Back</button></Link>
+            <button onClick={()=>oneBack()} className=" text-white bg-red-600 border-0 p-4 rounded-xl hover:bg-red-400 ">Go Back</button>
         </div>
     );
 };

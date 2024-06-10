@@ -6,23 +6,29 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from './Components/Root/Root.jsx';
 import Home from './Components/Home/Home.jsx';
 import Error from './Components/Error/Error.jsx';
+import Root from './Components/Root/Root.jsx';
+import SingleDonate from './Components/SingleDonate/SingleDonate.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <Root></Root>,
     errorElement:<Error></Error>,
     children:[
-      
+      {
+        path:"/",
+        element:<Home></Home>,
+      },
+      {
+        path:"/donate/:id",
+        element:<SingleDonate></SingleDonate>,
+        loader:()=>fetch("/data/category.json")
+      }
     ]
   },
-  {
-    path:"/home",
-    element:<Home></Home>
-  }
+ 
 ]);
 
 
