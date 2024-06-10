@@ -29,7 +29,7 @@ const SingleDonate = () => {
                         <ToastContainer></ToastContainer>
                     </div>
                 </div>
-                <div className="px-4">
+                <div className="px-4 md:px-0">
                     <h2 className="text-3xl font-bold my-6">{category}</h2>
                     <p className="text-lg text-justify">{description}</p>
                 </div>
