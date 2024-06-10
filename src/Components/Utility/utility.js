@@ -14,7 +14,7 @@ const saveDonateId = id =>{
     const exists = storedIds.find(donateId=>donateId === id);
     if(!exists){
        storedIds.push(id);
-       localStorage.setItem('donateId',JSON.stringify(storedJobApplication))
+       localStorage.setItem('donateId',JSON.stringify(storedIds))
     }
 
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveDonateId } from "../Utility/utility";
 
 const SingleDonate = () => {
     const { id } = useParams()
@@ -15,6 +16,7 @@ const SingleDonate = () => {
     const tost=() =>{
         toast("Your Donation Sucessfully Done!");
         setBtn(true);
+        saveDonateId(id)
     }
 
     return (
@@ -27,7 +29,7 @@ const SingleDonate = () => {
                         <ToastContainer></ToastContainer>
                     </div>
                 </div>
-                <div>
+                <div className="px-4">
                     <h2 className="text-3xl font-bold my-6">{category}</h2>
                     <p className="text-lg text-justify">{description}</p>
                 </div>
