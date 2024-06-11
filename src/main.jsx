@@ -10,6 +10,7 @@ import Home from './Components/Home/Home.jsx';
 import Error from './Components/Error/Error.jsx';
 import Root from './Components/Root/Root.jsx';
 import SingleDonate from './Components/SingleDonate/SingleDonate.jsx';
+import Donate from './Components/Donate/Donate.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
         path:"/donate/:id",
         element:<SingleDonate></SingleDonate>,
         loader:()=>fetch("/data/category.json")
+      },
+      {
+        path:"/donation",
+        element:<Donate></Donate>
       }
     ]
   },

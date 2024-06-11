@@ -1,8 +1,8 @@
 
 const getDonateId = ()=>{
-    const storedId = localStorage.getItem('donateId');
+    const storedId = localStorage.getItem('donateIds');
     if(storedId){
-        return JSON.parse(storedId)
+        return JSON.parse(storedId);
     }  
     return [];
     
@@ -14,7 +14,7 @@ const saveDonateId = id =>{
     const exists = storedIds.find(donateId=>donateId === id);
     if(!exists){
        storedIds.push(id);
-       localStorage.setItem('donateId',JSON.stringify(storedIds))
+       localStorage.setItem('donateIds',JSON.stringify(storedIds));
     }
 
 

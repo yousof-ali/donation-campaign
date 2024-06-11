@@ -11,7 +11,7 @@ const Category = () => {
     },[])
     
     return (
-        <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8 my-16">
+        <div className="container px-2 md:px-0 mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8 my-16">
             {
                 category.map(data =><SingleItem key={data.id} single_data={data}></SingleItem>)
             }
