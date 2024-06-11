@@ -1,43 +1,60 @@
 import { useEffect, useState } from "react";
-import { getDonateId} from "../Utility/utility";
+import { getDonateId } from "../Utility/utility";
 import DonateSingle from "../DonateSingle/DonateSingle";
 
 
 
 const Donate = () => {
-    
-    const[allData,setAllData]=useState([])
 
-    const[display,setDisplay]=useState([])
-    useEffect(()=>{
+    const [allData, setAllData] = useState([]);
+
+    const [display, setDisplay] = useState([]);
+    const[allDisplay,setAllDisplay] = useState([]);
+    const[btnClk,setBtnClk]=useState(false);
+
+
+    useEffect(() => {
         fetch('data/category.json')
-        .then(res=>res.json())
-        .then(data=>setAllData(data))
-    },[])
+            .then(res => res.json())
+            .then(data => setAllData(data))
+    }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         const saveId = getDonateId()
-        if(allData.length>0){
+        if (allData.length > 0) {
             const newData = []
-            for(const id of saveId){
-                const singel = allData?.find(item1=>item1.id===parseInt(id));
-                if(singel){
-                    newData.push(singel);  
+            for (const id of saveId) {
+                const singel = allData?.find(item1 => item1.id === parseInt(id));
+                if (singel) {
+                    newData.push(singel);
                 }
-                
+
             }
 
-            setDisplay(newData);
+            setDisplay(newData.slice(0,4));
+            setAllDisplay(newData);
         }
-    },[allData])
+    }, [allData])
+    
 
+
+    const handlebtn = ()=>{
+        setDisplay(allDisplay);
+        setBtnClk(true);
+    }
 
     return (
-        <div className="container grid grid-cols-1 md:grid-cols-2 mx-auto px-2 md:px-0 gap-8">
-         {
-            display.map(item=><DonateSingle
-            key={item.id} item={item}></DonateSingle>)
-         }
+        <div className="mx-auto container px-2 py-28 md:px-0">
+            <div className=" grid grid-cols-1 md:grid-cols-2  gap-8">
+                {
+                    display.map(item => <DonateSingle
+                        key={item.id} item={item}></DonateSingle>)
+                }
+
+            </div>
+            <div className="flex justify-center mt-8">
+                <button onClick={handlebtn} className={`btn btn-primary ${btnClk&& "hidden"} ${display.length<0&&"hidden"}`} >see more</button>
+            </div>
         </div>
     );
 };

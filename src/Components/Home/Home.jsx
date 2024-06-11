@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+
 import Bannar from "../Banner/Bannar";
 import Category from "../Category/Category";
 

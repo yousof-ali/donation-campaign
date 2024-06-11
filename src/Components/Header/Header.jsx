@@ -13,7 +13,7 @@ const Header = () => {
     </>
     return (
         <nav className="">
-            <div className="navbar container mx-auto">
+            <div className="navbar container  bg-white  mx-auto">
                 <div className="navbar-start ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,7 +23,7 @@ const Header = () => {
                             {menuBar}
                         </ul>
                     </div>
-                    <img className="  btn btn-ghost lg:justify-start text-xl" src="/public/img/Logo.png" alt="" />
+                    <img className="  btn btn-ghost lg:justify-start text-xl" src="/img/Logo.png" alt="" />
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal text-xl flex gap-8 px-1">
