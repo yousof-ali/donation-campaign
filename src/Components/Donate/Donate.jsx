@@ -42,9 +42,10 @@ const Donate = () => {
         setDisplay(allDisplay);
         setBtnClk(true);
     }
+    console.log(typeof display.length);
 
     return (
-        <div className="mx-auto container px-2 py-28 md:px-0">
+        <div className="mx-auto container px-2 py-4 md:py-16 md:px-0">
             <div className=" grid grid-cols-1 md:grid-cols-2  gap-8">
                 {
                     display.map(item => <DonateSingle
@@ -53,7 +54,7 @@ const Donate = () => {
 
             </div>
             <div className="flex justify-center mt-8">
-                <button onClick={handlebtn} className={`btn btn-primary ${btnClk&& "hidden"} ${display.length<0&&"hidden"}`} >see more</button>
+                <button onClick={handlebtn} className={`bg-green-600 text-white  font-bold py-2 px-4 rounded-md ${display.length<=4 && "hidden"}  ${btnClk&& "hidden"}`} >see more</button>
             </div>
         </div>
     );

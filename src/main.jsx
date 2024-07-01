@@ -11,6 +11,7 @@ import Error from './Components/Error/Error.jsx';
 import Root from './Components/Root/Root.jsx';
 import SingleDonate from './Components/SingleDonate/SingleDonate.jsx';
 import Donate from './Components/Donate/Donate.jsx';
+import Details from './Components/Details/Details.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,8 +31,13 @@ const router = createBrowserRouter([
         path:"/donation",
         element:<Donate></Donate>
       },
+      {
+        path:"/donation/details/:id",
+        element:<Details></Details>,
+        loader:()=>fetch("/data/category.json")
+      }
       
-     
+       
     ]
   },
  

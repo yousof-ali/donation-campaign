@@ -10,8 +10,8 @@ const SingleItem = ({ single_data }) => {
     return (
         <Link to={`/donate/${id}`}>
             <div onClick={saveInLocal} style={{ backgroundColor: bgColor, borderRadius: "10px" }}>
-                <div>
-                    <img className="rounded-xl " src={img} alt="Shoes" />
+                <div className="h-60">
+                    <img  className="rounded-xl h-full w-full " src={img} alt="img" />
                 </div>
                 <div className=" p-4 ">
                     <button style={{ color: textColor, backgroundColor: btnBgColor, padding: "10px", fontWeight: "bold", borderRadius: "10px" }}>{category}</button>
