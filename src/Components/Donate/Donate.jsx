@@ -54,7 +54,7 @@ const Donate = () => {
 
             </div>
             <div className="flex justify-center mt-8">
-                <button onClick={handlebtn} className={`bg-green-600 text-white  font-bold py-2 px-4 rounded-md ${display.length<=4 && "hidden"}  ${btnClk&& "hidden"}`} >see more</button>
+                <button onClick={handlebtn} className={`bg-green-600 text-white  font-bold py-2 px-4 rounded-md  ${btnClk&& "hidden"}`} >see more</button>
             </div>
         </div>
     );
