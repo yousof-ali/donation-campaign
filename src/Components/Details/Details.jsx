@@ -27,7 +27,7 @@ const Details = () => {
 
 
     return (
-        <div className="container space-y-4 p-6 rounded-md bg-slate-100 mx-auto flex flex-col items-center justify-center my-16">
+        <div className="container space-y-4 p-6 rounded-md bg-slate-100 mx-auto flex flex-col items-center justify-center my-2 md:my-8">
             <div className="w-1/2">
                 <img src={singleDonate.img} alt="" /></div>
             <div>

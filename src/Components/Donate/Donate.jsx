@@ -45,7 +45,7 @@ const Donate = () => {
     console.log(typeof display.length);
 
     return (
-        <div className="mx-auto container px-2 py-4 md:py-16 md:px-0">
+        <div className="mx-auto container px-2 py-2 md:py-8 md:px-0">
             <div className=" grid grid-cols-1 md:grid-cols-2  gap-8">
                 {
                     display.map(item => <DonateSingle

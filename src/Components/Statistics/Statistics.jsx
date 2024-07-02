@@ -17,12 +17,12 @@ const Statistics = () => {
     ];
     const COLORS = ['green', 'red']
     return (
-        <div >
-            <PieChart className="mx-auto" width={400} height={400}>
+        <div className="w-full flex justify-center mx-auto max-w-xl">
+            <PieChart width={300} height={400}>
                 <Pie
                     data={data}
-                    cx={200}
-                    cy={200}
+                    cx="50%"
+                    cy="50%"
                     labelLine={false}
                     label={true}
                     outerRadius={80}

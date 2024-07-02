@@ -20,7 +20,7 @@ const SingleDonate = () => {
     }
 
     return (
-        <div className="container mx-auto my-8">
+        <div className="container mx-auto md:my-6">
             <div className="max-w-7xl mx-auto" >
                 <div className="relative w-full">
                     <img className="w-full" src={`${img}`} alt="" />
